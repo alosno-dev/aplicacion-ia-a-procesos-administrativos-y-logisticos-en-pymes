@@ -24,11 +24,9 @@ El proyecto combina investigación teórica y resultados prácticos siguiendo es
 
 # Módulo 1: Desarrollo extractor inteligente de facturas
 
-<img width="611" height="578" alt="image" src="https://github.com/user-attachments/assets/83f8485e-f6b6-4d5f-bf1c-d6ec63ce7d7c" />
-
 Aplicación de OCR, PaddleOCR y su pipeline TableStructureV2, para extraer texto buscando el layout de la tabla y su información. PaddleOCR ofrece un rendimiento excepcional al procesar la mayoría de las tablas, alcanzando una tasa de precisión de reconocimiento de hasta el 93 %. Sin embargo, al tratar con tablas complejas que contienen celdas combinadas y marcas de agua, aún pueden presentarse problemas como caracteres redundantes y errores de reconocimiento. PaddleOCR nos dará la posición de las distintas celdas, textos y columnas de las facturas de los pdfs en un formato estructurado: JSON. Como en el caso de las facturas las tablas son muy variadas y complejas no podremos confiar plenamente en este proceso. Sin embargo, ofrecen una información muy valiosa que será usada más adelante.
 
-<img width="430" height="608" alt="image" src="https://github.com/user-attachments/assets/bb83c758-4765-4b86-bb6e-9dd1db29040e" />
+<img width="611" height="578" alt="image" src="https://github.com/user-attachments/assets/83f8485e-f6b6-4d5f-bf1c-d6ec63ce7d7c" />
 
 El conjunto de datos utilizado para el entrenamiento se construyó a partir de facturas reales etiquetadas manualmente, en los que cada fila fue identificada con su clase correspondiente. Posteriormente, las características fueron normalizadas y divididas en subconjuntos de entrenamiento (80%) y validación (20%) como recomienda (Diaz Romero, S., Sanyer Mosquera, W., & Menéndez Campos, J., 2021).
 Continuando con la estructuración de la información. Destacar para este proceso el uso de reglas básicas (regex, validaciones) para detectar errores (totales incorrectos, campos vacíos, duplicados), la clasificación del tipo de factura por contenido (compra, alquiler, servicios...) y finalmente la división de la información de la tabla en filas según la posición “y” de los textos reconocidos para analizar las filas por separadas. Esto será útil también para entrenar el modelo MLP.
