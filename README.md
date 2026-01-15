@@ -1,0 +1,2 @@
+# Aplicaci-n-de-Inteligencia-Artificial-a-procesos-administrativos-y-log-sticos-en-empresas
+Investigación sobre la viabilidad de un sistema modular de inteligencia artificial para automatizar procesos administrativos y logísticos en pequeñas y medianas empresas. El sistema se estructura en tres módulos principales: Un extractor inteligente de facturas,  generdor de horarios y chatbot asistente de pedidos
